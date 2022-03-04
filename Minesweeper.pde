@@ -73,9 +73,9 @@ public void draw ()
         if (buttons[r][c].isFlagged()) { flaggedout++; }
       }
     }
-    text("Dimensions: " + NUM_ROWS + "x" + NUM_COLS, 150, 50);
-    text("Mines: " + (mines.size()-flaggedout), 50, 50);
-    //text("Time: " + (float)(currTime-startTime)/1000 + " seconds", 300, 50);
+    text("Dimensions: " + NUM_ROWS + "x" + NUM_COLS, 150, 450);
+    text("Mines: " + (mines.size()-flaggedout), 50, 450);
+    //text("Time: " + (float)(currTime-startTime)/1000 + " seconds", 300, 450);
     if(isWon() == true && !resetwait) {
         displayWinningMessage();   
     } else if (lost){
@@ -156,7 +156,7 @@ public class MSButton
         myRow = row;
         myCol = col; 
         x = myCol*width;
-        y = myRow*height+100;
+        y = myRow*height;
         myLabel = "";
         flagged = clicked = false;
         Interactive.add( this ); // register it with the manager
