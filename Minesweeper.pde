@@ -15,8 +15,8 @@ int nummines = 30;
 public final static String LOSSMESSAGE = "Lose...";
 public final static String WINMESSAGE = "Win!!";
 int flaggedout = 0;
-int startTime = (int)(System.currentTimeMillis());
-int currTime = (int)(System.currentTimeMillis());
+//int startTime = (int)(System.currentTimeMillis());
+//int currTime = (int)(System.currentTimeMillis());
 
 //custom modes
 //m/n increment mines
@@ -65,7 +65,7 @@ public void setMines()
 
 public void draw ()
 {
-    currTime = (int)(System.currentTimeMillis());
+    //currTime = (int)(System.currentTimeMillis());
     background( 130 );
     flaggedout = 0;
     for (int r = 0; r < NUM_ROWS; r++){
@@ -75,7 +75,7 @@ public void draw ()
     }
     text("Dimensions: " + NUM_ROWS + "x" + NUM_COLS, 150, 50);
     text("Mines: " + (mines.size()-flaggedout), 50, 50);
-    text("Time: " + (float)(currTime-startTime)/1000 + " seconds", 300, 50);
+    //text("Time: " + (float)(currTime-startTime)/1000 + " seconds", 300, 50);
     if(isWon() == true && !resetwait) {
         displayWinningMessage();   
     } else if (lost){
