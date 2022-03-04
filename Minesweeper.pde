@@ -266,7 +266,7 @@ void keyPressed(){
     setMines();
     resetwait = false;
     lost = false;
-    startTime = (int)(System.currentTimeMillis());
+    //startTime = (int)(System.currentTimeMillis());
   }
 }
 void keyReleased(){
