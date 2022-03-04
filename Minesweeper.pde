@@ -70,7 +70,7 @@ public void displayLosingMessage()
     
     centerC = centerC-(LOSSMESSAGE.length()/2);
     for (int c = 0; c < LOSSMESSAGE.length(); c++){
-      buttons[centerR][centerC+c].setLabel(LOSSMESSAGE.substring(c, c+1));
+      buttons[centerR][centerC+c].myLabel = ""+(LOSSMESSAGE.substring(c, c+1));
     }
     
     //resetwait = true;
@@ -84,7 +84,7 @@ public void displayWinningMessage()
     centerC = centerC-(WINMESSAGE.length()/2);
     
     for (int c = 0; c < + WINMESSAGE.length(); c++){
-      buttons[centerR][centerC+c].setLabel(WINMESSAGE.substring(c, c+1));
+      buttons[centerR][centerC+c].myLabel = ""+(WINMESSAGE.substring(c, c+1));
     }
     
     //resetwait = true;
