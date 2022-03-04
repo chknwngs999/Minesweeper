@@ -5,8 +5,6 @@ private ArrayList <MSButton> mines; //ArrayList of just the minesweeper buttons 
 public static int NUM_ROWS = 10;
 public static int NUM_COLS = 10;
 public int nummines = 5;
-public final static String LOSSMESSAGE = "Lose...";
-public final static String WINMESSAGE = "Win!!";
 
 void setup ()
 {
@@ -61,6 +59,7 @@ public boolean isWon()
 public void displayLosingMessage()
 {
     //your code here
+    public static String LOSSMESSAGE = "Lose...";
     for (int mine = 0; mine < mines.size(); mine++){
       mines.get(mine).clicked = true;
     }
@@ -70,7 +69,7 @@ public void displayLosingMessage()
     
     centerC = centerC-(LOSSMESSAGE.length()/2);
     for (int c = 0; c < LOSSMESSAGE.length(); c++){
-      buttons[centerR][centerC+c].myLabel = ""+(LOSSMESSAGE.substring(c, c+1));
+      buttons[centerR][centerC+c].setLabel(LOSSMESSAGE.substring(c, c+1));
     }
     
     //resetwait = true;
@@ -78,13 +77,14 @@ public void displayLosingMessage()
 public void displayWinningMessage()
 {
     //your code here
+    public static String WINMESSAGE = "Win!!";
     int centerR = NUM_ROWS/2;
     int centerC = NUM_COLS/2;
     
     centerC = centerC-(WINMESSAGE.length()/2);
     
     for (int c = 0; c < + WINMESSAGE.length(); c++){
-      buttons[centerR][centerC+c].myLabel = ""+(WINMESSAGE.substring(c, c+1));
+      buttons[centerR][centerC+c].setLabel(WINMESSAGE.substring(c, c+1));
     }
     
     //resetwait = true;
